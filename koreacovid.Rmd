@@ -62,11 +62,23 @@ This bar graph shows that the female sex has higher results of alive but, the ma
 
 
   
-## Numerical results
+## Numerical results``` {r include = TRUE, echo = FALSE}
 
+``` {r include = TRUE, echo = FALSE}
+table2 <- xtabs(~result + sex, data=kRdata)
+rowPerc(table2)
+colPerc(table2)
+```
+The table shows that there are higher rates of being alive in the female sex with 98.7% alive and 1.4% dead whereas the male sex has higher rates of death at 3% and 97% alive. 
 
 ## Inferential results 
 
+``` {r include = TRUE, echo = FALSE}
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
+```
+The Chi-squared test and the fisher exact test highlights the disparity between the sexes of male and female in regards to being alive or dead. The p-value of 0.0009 confirms that there is a significant difference in the data with males about 2 times more likely than females to die from covid at least in the case of Korea.
 
 
 
