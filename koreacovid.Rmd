@@ -26,7 +26,7 @@ Some of the data was uncoded for sex - sex must be just male or female
 state of a patient must be died or alive - we adjust that as well   
   
 # Your Question - Is dying independent of sex?
-
+This is a categorical~categorical comparison that looks at the data of covid in Korea to see if dying is independent of the sex of an individual whether they are male or female. The first variable is Sex which is categorized as "F" and "M" for male and female. The second variable is the results of their condition which are categorized as "alive" and "dead."
 
 
 
