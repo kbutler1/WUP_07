@@ -28,11 +28,30 @@ state of a patient must be died or alive - we adjust that as well
 # Your Question - Is dying independent of sex?
 This is a categorical~categorical comparison that looks at the data of covid in Korea to see if dying is independent of the sex of an individual whether they are male or female. The first variable is Sex which is categorized as "F" and "M" for male and female. The second variable is the results of their condition which are categorized as "alive" and "dead."
 
+Analyzing the data will allow us to see if there is a correlation between the result of dead or alive and the sex of the individual or if both sexes have similar results.
 
+The main hypothesis is that the results of dead and alive are strongly correlated to one sex or the other but, the alternate hypothesis is that the two sexes have similar results of dead and alive.
 
 
 
 ## Graphical results - use ggplot commands to do this  
+```{r}
+dd2 <- kRdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=Sex))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+This bar graph shows that the female sex has higher results of alive but, the male sex has lower results of being alive and higher results of being dead. This indicates that there is a difference in the results of Covid cases in Korea between the two sexes.
+  
 
 
 
