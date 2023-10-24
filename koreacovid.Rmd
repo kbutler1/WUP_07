@@ -84,3 +84,6 @@ The Chi-squared test and the fisher exact test highlights the disparity between 
 
 ## Conclusions
 
+The kRdata ultimately shows that as we looked at the cat~cat problem, we found that there was a significant difference in the results of covid cases between the two sexes male and female. This was found through using a ggplot test to visualize the data in a bar graph followed by a chi-squared test and fisher exact test to confirm that there was a significant difference in the data between the sexes. It was found that in covid cases in Korea, males were found to die at a rate double the rate of deaths in females with females living more often.
+
+
